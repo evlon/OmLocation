@@ -1,5 +1,13 @@
 pluginManagement {
     repositories {
+//        gradlePluginPortal()
+//        google()
+//        mavenCentral()
+
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
         gradlePluginPortal()
         google()
         mavenCentral()
@@ -11,7 +19,13 @@ dependencyResolutionManagement {
         google()
         maven { url "https://api.xposed.info/" }
         maven { url "https://www.jitpack.io" }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
         maven { url "https://s01.oss.sonatype.org/content/repositories/releases" }
+
+        google()
         mavenCentral()
     }
 }

@@ -119,7 +119,7 @@
                 android:alpha="0.8"
                 android:ellipsize="end"
                 android:singleLine="true"
-                android:text="- Your custom text here -"
+                android:text="@string/module_info"
                 android:textColor="@color/white"
                 android:textSize="13sp" />
 
@@ -136,8 +136,76 @@
                 android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
-
     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_permotion_round"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start">
+
+
+            <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/ic_home" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.85"
+                    android:singleLine="true"
+                    android:text="@string/location_settings"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="12sp" />
+        </LinearLayout>
+        <me.evlon.project.ui.view.MaterialSwitch
+                android:text="@string/disable_report_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchReportLocation"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextGray"
+                android:textSize="15sp"
+        />
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fadingEdgeLength="10dp"
+                android:fillViewport="true"
+                android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+            <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/main_recent_location">
+
+            </RadioGroup>
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -151,27 +219,28 @@
         android:paddingTop="15dp"
         android:paddingRight="15dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center|start">
 
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginEnd="10dp"
-                android:src="@mipmap/ic_home" />
+         <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center|start">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.85"
-                android:singleLine="true"
-                android:text="@string/display_settings"
-                android:textColor="@color/colorTextGray"
-                android:textSize="12sp" />
-        </LinearLayout>
 
+             <ImageView
+                     android:layout_width="15dp"
+                     android:layout_height="15dp"
+                     android:layout_marginEnd="10dp"
+                     android:src="@mipmap/ic_home" />
+
+             <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:alpha="0.85"
+                     android:singleLine="true"
+                     android:text="@string/display_settings"
+                     android:textColor="@color/colorTextGray"
+                     android:textSize="12sp" />
+         </LinearLayout>
         <me.evlon.project.ui.view.MaterialSwitch
             android:id="@+id/hide_icon_in_launcher_switch"
             android:layout_width="match_parent"
@@ -245,6 +314,6 @@
                     android:textColor="@color/colorTextGray"
                     android:textSize="11sp" />
             </LinearLayout>
-        </LinearLayout>
+          </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
